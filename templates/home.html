@@ -1,0 +1,154 @@
+{% include 'base.html' %}
+{% block content %}
+<style>
+.navbar
+{
+    background-image: repeating-linear-gradient(to right, darkgrey,black);
+    padding: 0; 
+}
+
+</style>
+<section id="nav-bar" >
+    <nav class="navbar navbar-expand-lg navbar-dark" style="height: 50px;"  >
+        <a class="navbar-brand" href="#"><img src="/static/images/icon.jpg" style="width: 55px; height: 30px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/" style="color:white;">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/index" style="color:white;">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/test" style="color:white;">Take Test</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#" style="color:white;" >Items</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+</section>
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="/static/images/jenkin.jpg" style="width:100%; height: 300px;">
+    <div class="text" style="color:black;">Caption Text</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="/static/images/dock.jpg" style="width:100%; height: 300px;">
+    <div class="text" style="color:black;">Caption Two</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="/static/images/github.jpg" style="width:100%; height: 300px;">
+    <div class="text" style="color:black;">Caption Three</div>
+  </div>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot" style="width: 10px; height: 10px;"></span> 
+    <span class="dot" style="width: 10px; height: 10px;"></span> 
+    <span class="dot" style="width: 10px; height: 10px;"></span> 
+  </div>
+  
+  <script>
+  var slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+  </script>
+</div>
+<section id="content-section5" class="content-section5">
+<br>
+<br>
+<br>
+
+  <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="text-center single-content">
+              <img src="/static/images/jenk.jpg" style="width: 85px; height: 75px;"></i>
+              <h3 style="font-family: 'Times New Roman', Times, serif; font-weight: bold;">Jenkins</h3>
+              <p>
+                   probant an malis deserunt commodo labore labore do pariatur, culpa concursionibus singulis multos consequat. Nostrud anim eiusmod, ita aliqua fabulas.
+              </p>
+              <a class="btn btn-default button" href="https://jenkins.io/doc/book/installing/" style="background-color:black; border-radius: 8px; color: white; box-shadow: grey;"> Install Now</a>
+          </div>    
+      </div>
+      <div class="col-md-4">
+          <div class="text-center single-content">
+              <img src="/static/images/docker.jpg" style="width: 105px; height: 75px;"></i>
+              <h3 style="font-family: monospace; font-weight: bold; font-size: 25px;">docker</h3>
+              <p>
+                   probant an malis deserunt commodo labore labore do pariatur, culpa concursionibus singulis multos consequat. Nostrud anim eiusmod, ita aliqua fabulas.
+              </p>
+              <a class="btn btn-default button" href="https://docs.docker.com/install/" style="background-color: black; border-radius: 8px; color: white; box-shadow: grey;"> Install Now</a>
+          </div>    
+      </div>
+      <div class="col-md-4">
+          <div class="text-center single-content">
+              <img src="/static/images/gits.jpg" style="width: 75px; height: 75px;"></i>
+              <h3 style="font-family: 'Times New Roman', Times, serif; font-weight: bold;"> git</h3>
+              <p>
+                   probant an malis deserunt commodo labore labore do pariatur, culpa concursionibus singulis multos consequat. Nostrud anim eiusmod, ita aliqua fabulas.
+              </p>
+              <a class="btn btn-default button" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" style="background-color: black; border-radius: 8px; color: white; box-shadow: grey;"> Install Now</a>
+          </div>    
+      </div>
+      </div><!-- end row -->
+  </div><!-- end container -->
+</section>
+<br>
+<br>
+<br>
+
+
+<!-- contact & Footer -->
+<footer class="footer4">
+  <div style="background-image: url('/static/images/footer.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center section-intro">
+              <div>
+                <h6></h6>
+                <h3 class="footer-logo" style="color:white; font-family: 'Times New Roman', Times, serif; font-weight: bold;">Automatic Answer Checker</h3>
+                <p style="color:white;">by CHIRAG JAIN</p>
+                <hr class="footer-margin" color="white" style="height: 2px;">
+              </div>
+              <div class="col-md-12 text-center section-intro">
+                <ul class="list-unstyled">
+                    <li class="addr-title" style="color:white;">Contact Us</li>
+                    <li><i class="fa fa-phone" style="color:black;"> </i> <span style="color:white;"> +91-9968702151 </span><i class="fa fa-envelope-o" style="color:black;"> </i> <span style="color:white;"> Chirag.Jain@st.niituniversity.in      </span><i class="fa fa-home" style="color:black;"> </i> <span style="color:white;"> NIIT University</span></li>
+                </ul>
+              </div>   
+            </div>
+          </div>    
+    </div>     
+  </footer>
+  
+{% endblock %}

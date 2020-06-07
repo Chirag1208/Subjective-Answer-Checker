@@ -1,0 +1,86 @@
+{% include 'base.html' %}
+{% block content %}
+<script>
+        function showAlert() {
+            alert("Response noted! Submit another Response!");
+        }
+</script>
+<style>
+    .navbar
+    {
+        background-image: repeating-linear-gradient(to right, darkgrey,black);
+        padding: 0; 
+    }
+</style>
+<body class="text-center">
+    <section id="nav-bar" >
+        <nav class="navbar navbar-expand-lg navbar-dark" style="height: 50px;"  >
+            <a class="navbar-brand" href="#"><img src="/static/images/icon.jpg" style="width: 55px; height: 30px;"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="/" style="color:white;">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/index" style="color:white;">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/test" style="color:white;">Take Test</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#" style="color:white;" >Items</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </section>
+<form class="form-signin" action="{{ url_for("foo") }}" method="post">
+    <div class="container">
+
+        <br>
+        <h6 class="h3 mb-3 font-weight-normal">Question1 :</h6>
+        <br>
+        <h3 class="h3 mb-3 font-weight-normal">What is Encapsulation? Give Example.</h3>
+        <br>
+        <textarea name="first" rows="5" cols="100" title="Answer"></textarea><!--name=id -->
+        <br>
+        <br>
+        <a class="btn btn-default button" href="#q2" style="background-color: black; border-radius: 8px; color: white; box-shadow: grey;">Next</a>
+        <br>
+        <br>
+    </div>
+    <hr class="footer-margin" color="grey" style="height: 2px;">    
+    <div id="q2">
+        <h6 class="h3 mb-3 font-weight-normal">Question2 :</h6>
+        <br>
+        <h3 class="h3 mb-3 font-weight-normal">Define Asymptotic Notation and list its types.</h3>
+        <br>
+        <textarea name="second" rows="5" cols="100" title="Answer"></textarea>
+        <br>
+        <br>
+        <a class="btn btn-default button" href="/test" style="background-color: black; border-radius: 8px; color: white; box-shadow: grey;"> < Back</a><span style="width: 50px;">        </span><a class="btn btn-default button" href="#q3" style="background-color: black; border-radius: 8px; color: white; box-shadow: grey;">Next > </a>
+        <br>
+        <br>
+    </div>
+    <hr class="footer-margin" color="grey" style="height: 2px;">
+    <div id="q3">
+        <h6 class="h3 mb-3 font-weight-normal">Question3 :</h6>
+        <br>
+        <h3>What is Polymorphism ? List its Types.</h3>
+        <br>
+        <textarea name="third" rows="5" cols="100" title="Answer"></textarea>
+        <br>
+
+        <br>
+        <a class="btn btn-default button" href="#q2" style="background-color: black; border-radius: 8px; color: white; box-shadow: grey;"> < Back</a>
+        <input type="email" placeholder="Email ID*" name="emailID">
+
+        <input type="submit" value="Submit" class="btn btn-default button" style="background-color: black; border-radius: 8px; color: white; box-shadow: grey;" onclick="showAlert()">
+
+    </div>
+</form>
+</body>
+{% endblock %}

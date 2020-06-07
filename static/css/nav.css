@@ -1,0 +1,25 @@
+#nav-bar
+{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.navbar
+{
+    background-image: linear-gradient(to right, darkgrey,black);
+    padding: 0; 
+}
+.navbar-brand
+{   
+    height: 40px;
+    padding-left: 20px;
+}
+.navbar-nav li
+{
+    padding: 0 10px;
+}
+.nav-link
+{
+    color: #ffffff; 
+    font-weight: 600;
+}
